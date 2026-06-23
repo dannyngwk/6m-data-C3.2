@@ -26,9 +26,9 @@ def clean_data(data):
 
     # --- EXAMPLE (commented out): derive remaining lease in years ---
     # "61 years 04 months" -> 61.0
-    # data["remaining_lease_years"] = (
-    #     data["remaining_lease"].str.extract(r"(\d+)\s*year").astype(float)
-    # )
+     data["remaining_lease_years"] = (
+         data["remaining_lease"].str.extract(r"(\d+)\s*year").astype(float)
+     )
 
     return data
 
@@ -47,8 +47,8 @@ FEATURES = [
     {"col": "town", "type": "categorical", "label": "Town"},
 
     # --- EXAMPLE (uncomment after enabling it in clean_data above) ---
-    # {"col": "remaining_lease_years", "type": "numeric", "label": "Remaining lease (years)",
-    #  "min": 40, "max": 99, "default": 70, "step": 1},
+     {"col": "remaining_lease_years", "type": "numeric", "label": "Remaining lease (years)",
+      "min": 40, "max": 99, "default": 70, "step": 1},
 ]
 
 

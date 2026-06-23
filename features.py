@@ -26,9 +26,7 @@ def clean_data(data):
 
     # --- EXAMPLE (commented out): derive remaining lease in years ---
     # "61 years 04 months" -> 61.0
-     data["remaining_lease_years"] = (
-         data["remaining_lease"].str.extract(r"(\d+)\s*year").astype(float)
-     )
+    data["remaining_lease_years"] = (data["remaining_lease"].str.extract(r"(\d+)\s*year").astype(float))
 
     return data
 
